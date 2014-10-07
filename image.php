@@ -8,10 +8,6 @@ $config = require 'config.php';
 
 header('Content-Type: image/jpeg');
 
-if (isset($_GET['old'])) {
-  echo file_get_contents(IMAGE_CAMERA_NAME);
-}
-
 $http = new Httpbapc($config['url'], $config['username'], $config['password']);
 $image_string = $http->execute();
 
